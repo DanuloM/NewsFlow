@@ -1,0 +1,207 @@
+[
+  {
+    "model": "agency.topic",
+    "pk": 1,
+    "fields": {"name": "Drama"}
+  },
+  {
+    "model": "agency.topic",
+    "pk": 2,
+    "fields": {"name": "Politics"}
+  },
+  {
+    "model": "agency.topic",
+    "pk": 3,
+    "fields": {"name": "Sports"}
+  },
+  {
+    "model": "agency.topic",
+    "pk": 4,
+    "fields": {"name": "Technology"}
+  },
+  {
+    "model": "agency.topic",
+    "pk": 5,
+    "fields": {"name": "Health"}
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 1,
+    "fields": {
+      "username": "jackS",
+      "first_name": "Jack",
+      "last_name": "Smith",
+      "email": "jack@example.com",
+      "years_of_experience": 5,
+      "is_staff": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 2,
+    "fields": {
+      "username": "janeD",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email": "jane@example.com",
+      "years_of_experience": 3,
+      "is_staff": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 3,
+    "fields": {
+      "username": "mikeB",
+      "first_name": "Mike",
+      "last_name": "Brown",
+      "email": "mike@example.com",
+      "years_of_experience": 7,
+      "is_staff": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 4,
+    "fields": {
+      "username": "saraK",
+      "first_name": "Sara",
+      "last_name": "King",
+      "email": "sara@example.com",
+      "years_of_experience": 2,
+      "is_staff": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 5,
+    "fields": {
+      "username": "tomL",
+      "first_name": "Tom",
+      "last_name": "Lee",
+      "email": "tom@example.com",
+      "years_of_experience": 4,
+      "is_staff": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "Breaking News",
+      "content": "Exciting news content here.",
+      "published_date": "2025-10-06",
+      "topic": 1,
+      "publishers": [1, 2]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "Politics Today",
+      "content": "Political news content.",
+      "published_date": "2025-10-05",
+      "topic": 2,
+      "publishers": [2, 3]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "Sports Weekly",
+      "content": "All about sports.",
+      "published_date": "2025-10-04",
+      "topic": 3,
+      "publishers": [3, 4]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "Tech Daily",
+      "content": "Latest in technology.",
+      "published_date": "2025-10-03",
+      "topic": 4,
+      "publishers": [4, 5]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Health & Wellness",
+      "content": "Tips for healthy living.",
+      "published_date": "2025-10-02",
+      "topic": 5,
+      "publishers": [1, 5]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "Drama Spotlight",
+      "content": "All about theater and drama.",
+      "published_date": "2025-10-01",
+      "topic": 1,
+      "publishers": [1, 3]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Political Insights",
+      "content": "In-depth political analysis.",
+      "published_date": "2025-09-30",
+      "topic": 2,
+      "publishers": [2, 4]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "Sports Roundup",
+      "content": "Weekly sports highlights.",
+      "published_date": "2025-09-29",
+      "topic": 3,
+      "publishers": [3, 5]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "Tech Innovations",
+      "content": "New gadgets and AI.",
+      "published_date": "2025-09-28",
+      "topic": 4,
+      "publishers": [1, 4]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Healthy Living Tips",
+      "content": "Nutrition and exercise.",
+      "published_date": "2025-09-27",
+      "topic": 5,
+      "publishers": [2, 5]
+    }
+  }
+]
