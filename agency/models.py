@@ -30,4 +30,4 @@ class Newspaper(models.Model):
         ordering = ["-published_date"]
 
     def __str__(self):
-        return f"{self.title} (Topic: {self.content})"
+        return f"{self.title} (Topic: {self.topic})"
