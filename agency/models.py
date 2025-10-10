@@ -1,5 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls.base import reverse
+
 
 # Create your models here.
 class Topic(models.Model):
@@ -28,6 +30,10 @@ class Newspaper(models.Model):
 
     class Meta:
         ordering = ["-published_date"]
+
+    def get_absolute_url(self):
+        return reverse("agency:newspaper-detail", args=[str(self.id)])
+
 
     def __str__(self):
         return f"{self.title} (Topic: {self.topic})"

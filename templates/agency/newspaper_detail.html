@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <h2>Newspaper</h2>
+  <p><strong>Title: </strong>{{ newspaper.title }}</p>
+  <p><strong>Topic: </strong>{{ newspaper.topic }}</p>
+  <p>{{ newspaper.content }}</p>
+  <strong>Authors: </strong>
+  {% for author in newspaper.publishers.all %}
+    <p>{{ author.first_name }} {{ author.last_name }}</p>
+
+  {% endfor %}
+
+  <p>{{ newspaper.published_date }}</p>
+
+{% endblock %}

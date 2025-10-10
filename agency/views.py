@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 
 from agency.models import Newspaper, Topic, Redactor
 
@@ -13,3 +14,14 @@ def index(request):
         "num_of_redactors": num_of_redactors,
     }
     return render(request, "agency/index.html", context)
+
+
+class NewspaperListView(generic.ListView):
+    model = Newspaper
+    paginate_by = 10
+
+
+
+class NewspaperDetailView(generic.DetailView):
+    model = Newspaper
+    queryset = Newspaper.objects.prefetch_related("publishers").select_related("topic")

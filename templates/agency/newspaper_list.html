@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <h1>Newspapers</h1>
+  <ul>
+    {% for newspaper in newspaper_list %}
+      <li>
+        <a href="{{ newspaper.get_absolute_url }}">{{ newspaper.title }}</a>
+      </li>
+    {% empty %}
+      <p>No newspapers available yet.</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
