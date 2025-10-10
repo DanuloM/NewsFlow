@@ -25,3 +25,9 @@ class NewspaperListView(generic.ListView):
 class NewspaperDetailView(generic.DetailView):
     model = Newspaper
     queryset = Newspaper.objects.prefetch_related("publishers").select_related("topic")
+
+
+
+class TopicListView(generic.ListView):
+    model = Topic
+    paginate_by = 10
