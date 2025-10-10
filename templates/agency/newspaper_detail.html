@@ -2,7 +2,8 @@
 
 
 {% block content %}
-  <h2>Newspaper</h2>
+  <h2>Newspaper <a class="btn btn-primary" style="float: right" href="{{ request.META.HTTP_REFERER }}">Back to the
+    list</a></h2>
   <p><strong>Title: </strong>{{ newspaper.title }}</p>
   <p><strong>Topic: </strong>{{ newspaper.topic }}</p>
   <p>{{ newspaper.content }}</p>
