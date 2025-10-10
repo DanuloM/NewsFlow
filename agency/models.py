@@ -2,8 +2,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.urls.base import reverse
 
-
 # Create your models here.
+
 class Topic(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -19,6 +19,9 @@ class Redactor(AbstractUser):
 
     def __str__(self):
         return f"{self.username} {self.first_name} {self.last_name}"
+
+    def get_absolute_url(self):
+        return reverse("agency:redactor-detail", args=[str(self.id)])
 
 
 class Newspaper(models.Model):

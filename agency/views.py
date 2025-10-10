@@ -31,3 +31,15 @@ class NewspaperDetailView(generic.DetailView):
 class TopicListView(generic.ListView):
     model = Topic
     paginate_by = 10
+
+
+
+class RedactorListView(generic.ListView):
+    model = Redactor
+    paginate_by = 10
+
+
+
+class RedactorDetailView(generic.DetailView):
+    model = Redactor
+    

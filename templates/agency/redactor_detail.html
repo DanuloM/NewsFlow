@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Author <a class="btn btn-primary" style="float: right" href="{{ request.META.HTTP_REFERER }}">Back to the
+    list</a></h2>
+  <p><strong>Username: </strong>{{ redactor.username }}</p>
+  <p><strong>First name: </strong>{{ redactor.first_name }}</p>
+  <p><strong>Last name: </strong>{{ redactor.last_name }}</p>
+  <h3>Books:</h3>
+  {% for book in redactor.newspapers.all %}
+    <p>{{ book.title }}</p>
+  {% endfor %}
+{% endblock %}

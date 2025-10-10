@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <h2>Authors</h2>
+  {% for redactor in redactor_list %}
+    <p><a href={{ redactor.get_absolute_url }}>{{ redactor.first_name }} {{ redactor.last_name }}</a></p>
+  {% endfor %}
+  
+{% endblock %}
