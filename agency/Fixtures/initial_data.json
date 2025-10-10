@@ -1,207 +1,89 @@
 [
-  {
-    "model": "agency.topic",
-    "pk": 1,
-    "fields": {"name": "Drama"}
-  },
-  {
-    "model": "agency.topic",
-    "pk": 2,
-    "fields": {"name": "Politics"}
-  },
-  {
-    "model": "agency.topic",
-    "pk": 3,
-    "fields": {"name": "Sports"}
-  },
-  {
-    "model": "agency.topic",
-    "pk": 4,
-    "fields": {"name": "Technology"}
-  },
-  {
-    "model": "agency.topic",
-    "pk": 5,
-    "fields": {"name": "Health"}
-  },
-  {
-    "model": "agency.redactor",
-    "pk": 1,
-    "fields": {
-      "username": "jackS",
-      "first_name": "Jack",
-      "last_name": "Smith",
-      "email": "jack@example.com",
-      "years_of_experience": 5,
-      "is_staff": false,
-      "is_active": true,
-      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
-    }
-  },
-  {
-    "model": "agency.redactor",
-    "pk": 2,
-    "fields": {
-      "username": "janeD",
-      "first_name": "Jane",
-      "last_name": "Doe",
-      "email": "jane@example.com",
-      "years_of_experience": 3,
-      "is_staff": false,
-      "is_active": true,
-      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
-    }
-  },
-  {
-    "model": "agency.redactor",
-    "pk": 3,
-    "fields": {
-      "username": "mikeB",
-      "first_name": "Mike",
-      "last_name": "Brown",
-      "email": "mike@example.com",
-      "years_of_experience": 7,
-      "is_staff": false,
-      "is_active": true,
-      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
-    }
-  },
-  {
-    "model": "agency.redactor",
-    "pk": 4,
-    "fields": {
-      "username": "saraK",
-      "first_name": "Sara",
-      "last_name": "King",
-      "email": "sara@example.com",
-      "years_of_experience": 2,
-      "is_staff": false,
-      "is_active": true,
-      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
-    }
-  },
-  {
-    "model": "agency.redactor",
-    "pk": 5,
-    "fields": {
-      "username": "tomL",
-      "first_name": "Tom",
-      "last_name": "Lee",
-      "email": "tom@example.com",
-      "years_of_experience": 4,
-      "is_staff": false,
-      "is_active": true,
-      "password": "pbkdf2_sha256$260000$dummy$dummyhash"
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 1,
-    "fields": {
-      "title": "Breaking News",
-      "content": "Exciting news content here.",
-      "published_date": "2025-10-06",
-      "topic": 1,
-      "publishers": [1, 2]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 2,
-    "fields": {
-      "title": "Politics Today",
-      "content": "Political news content.",
-      "published_date": "2025-10-05",
-      "topic": 2,
-      "publishers": [2, 3]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 3,
-    "fields": {
-      "title": "Sports Weekly",
-      "content": "All about sports.",
-      "published_date": "2025-10-04",
-      "topic": 3,
-      "publishers": [3, 4]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 4,
-    "fields": {
-      "title": "Tech Daily",
-      "content": "Latest in technology.",
-      "published_date": "2025-10-03",
-      "topic": 4,
-      "publishers": [4, 5]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 5,
-    "fields": {
-      "title": "Health & Wellness",
-      "content": "Tips for healthy living.",
-      "published_date": "2025-10-02",
-      "topic": 5,
-      "publishers": [1, 5]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 6,
-    "fields": {
-      "title": "Drama Spotlight",
-      "content": "All about theater and drama.",
-      "published_date": "2025-10-01",
-      "topic": 1,
-      "publishers": [1, 3]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 7,
-    "fields": {
-      "title": "Political Insights",
-      "content": "In-depth political analysis.",
-      "published_date": "2025-09-30",
-      "topic": 2,
-      "publishers": [2, 4]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 8,
-    "fields": {
-      "title": "Sports Roundup",
-      "content": "Weekly sports highlights.",
-      "published_date": "2025-09-29",
-      "topic": 3,
-      "publishers": [3, 5]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 9,
-    "fields": {
-      "title": "Tech Innovations",
-      "content": "New gadgets and AI.",
-      "published_date": "2025-09-28",
-      "topic": 4,
-      "publishers": [1, 4]
-    }
-  },
-  {
-    "model": "agency.newspaper",
-    "pk": 10,
-    "fields": {
-      "title": "Healthy Living Tips",
-      "content": "Nutrition and exercise.",
-      "published_date": "2025-09-27",
-      "topic": 5,
-      "publishers": [2, 5]
-    }
-  }
+  {"model": "agency.topic", "pk": 1, "fields": {"name": "Politics"}},
+  {"model": "agency.topic", "pk": 2, "fields": {"name": "Technology"}},
+  {"model": "agency.topic", "pk": 3, "fields": {"name": "Sports"}},
+  {"model": "agency.topic", "pk": 4, "fields": {"name": "Health"}},
+  {"model": "agency.topic", "pk": 5, "fields": {"name": "Environment"}},
+  {"model": "agency.topic", "pk": 6, "fields": {"name": "Entertainment"}},
+  {"model": "agency.topic", "pk": 7, "fields": {"name": "Economy"}},
+  {"model": "agency.topic", "pk": 8, "fields": {"name": "Education"}},
+  {"model": "agency.topic", "pk": 9, "fields": {"name": "Travel"}},
+  {"model": "agency.topic", "pk": 10, "fields": {"name": "Science"}},
+
+  {"model": "agency.redactor", "pk": 1, "fields": {"username": "jackS", "first_name": "Jack", "last_name": "Smith", "email": "jack@example.com", "years_of_experience": 5, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 2, "fields": {"username": "janeD", "first_name": "Jane", "last_name": "Doe", "email": "jane@example.com", "years_of_experience": 3, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 3, "fields": {"username": "mikeB", "first_name": "Mike", "last_name": "Brown", "email": "mike@example.com", "years_of_experience": 7, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 4, "fields": {"username": "saraK", "first_name": "Sara", "last_name": "King", "email": "sara@example.com", "years_of_experience": 2, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 5, "fields": {"username": "tomL", "first_name": "Tom", "last_name": "Lee", "email": "tom@example.com", "years_of_experience": 4, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 6, "fields": {"username": "amyW", "first_name": "Amy", "last_name": "White", "email": "amy@example.com", "years_of_experience": 6, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 7, "fields": {"username": "davidR", "first_name": "David", "last_name": "Roberts", "email": "david@example.com", "years_of_experience": 9, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 8, "fields": {"username": "lisaM", "first_name": "Lisa", "last_name": "Moore", "email": "lisa@example.com", "years_of_experience": 1, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 9, "fields": {"username": "kevinP", "first_name": "Kevin", "last_name": "Perez", "email": "kevin@example.com", "years_of_experience": 8, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+  {"model": "agency.redactor", "pk": 10, "fields": {"username": "ninaG", "first_name": "Nina", "last_name": "Green", "email": "nina@example.com", "years_of_experience": 4, "is_staff": false, "is_active": true, "password": "pbkdf2_sha256$260000$dummy$dummyhash"}},
+
+  {"model": "agency.newspaper", "pk": 1, "fields": {"title": "Global Politics Review", "content": "An overview of global political dynamics and recent events shaping the world.", "published_date": "2025-10-09", "topic": 1, "publishers": [1,2]}},
+  {"model": "agency.newspaper", "pk": 2, "fields": {"title": "Tech Frontier", "content": "Exploring innovations in AI, robotics, and next-gen computing.", "published_date": "2025-10-08", "topic": 2, "publishers": [3,6]}},
+  {"model": "agency.newspaper", "pk": 3, "fields": {"title": "Champions Weekly", "content": "A deep dive into recent sports tournaments and player stats.", "published_date": "2025-10-07", "topic": 3, "publishers": [3,4]}},
+  {"model": "agency.newspaper", "pk": 4, "fields": {"title": "Healthy Choices", "content": "Nutrition, fitness, and longevity tips from experts.", "published_date": "2025-10-06", "topic": 4, "publishers": [4,5]}},
+  {"model": "agency.newspaper", "pk": 5, "fields": {"title": "Green Planet", "content": "Environmental initiatives and sustainability innovations worldwide.", "published_date": "2025-10-05", "topic": 5, "publishers": [5,6]}},
+  {"model": "agency.newspaper", "pk": 6, "fields": {"title": "Cinema Pulse", "content": "Highlights from global film festivals and interviews with directors.", "published_date": "2025-10-04", "topic": 6, "publishers": [6,1]}},
+  {"model": "agency.newspaper", "pk": 7, "fields": {"title": "Market Watch", "content": "Stock trends, crypto volatility, and global economy updates.", "published_date": "2025-10-03", "topic": 7, "publishers": [7,3]}},
+  {"model": "agency.newspaper", "pk": 8, "fields": {"title": "Learning Matters", "content": "Education reforms and digital learning in modern classrooms.", "published_date": "2025-10-02", "topic": 8, "publishers": [8,2]}},
+  {"model": "agency.newspaper", "pk": 9, "fields": {"title": "Traveler's Digest", "content": "Top 10 destinations for 2025 and hidden gems worldwide.", "published_date": "2025-10-01", "topic": 9, "publishers": [9,10]}},
+  {"model": "agency.newspaper", "pk": 10, "fields": {"title": "Scientific Horizons", "content": "Breakthroughs in physics, biology, and space exploration.", "published_date": "2025-09-30", "topic": 10, "publishers": [10,1]}},
+
+  {"model": "agency.newspaper", "pk": 11, "fields": {"title": "AI Revolution", "content": "How artificial intelligence is redefining industries.", "published_date": "2025-09-29", "topic": 2, "publishers": [2,7]}},
+  {"model": "agency.newspaper", "pk": 12, "fields": {"title": "Fit Life", "content": "Simple routines for a balanced lifestyle.", "published_date": "2025-09-28", "topic": 4, "publishers": [4,6]}},
+  {"model": "agency.newspaper", "pk": 13, "fields": {"title": "World Cup Focus", "content": "Teams to watch and predictions for the next big event.", "published_date": "2025-09-27", "topic": 3, "publishers": [5,8]}},
+  {"model": "agency.newspaper", "pk": 14, "fields": {"title": "Classroom Tech", "content": "How EdTech startups are reshaping learning.", "published_date": "2025-09-26", "topic": 8, "publishers": [8,3]}},
+  {"model": "agency.newspaper", "pk": 15, "fields": {"title": "Eco Future", "content": "Renewable energy and carbon neutrality goals.", "published_date": "2025-09-25", "topic": 5, "publishers": [6,9]}},
+  {"model": "agency.newspaper", "pk": 16, "fields": {"title": "Movie Buzz", "content": "Upcoming blockbusters and critics’ expectations.", "published_date": "2025-09-24", "topic": 6, "publishers": [9,10]}},
+  {"model": "agency.newspaper", "pk": 17, "fields": {"title": "Space Update", "content": "New rocket launches and deep space missions.", "published_date": "2025-09-23", "topic": 10, "publishers": [10,7]}},
+  {"model": "agency.newspaper", "pk": 18, "fields": {"title": "Economic Outlook", "content": "Forecasts for 2026 global markets.", "published_date": "2025-09-22", "topic": 7, "publishers": [3,5]}},
+  {"model": "agency.newspaper", "pk": 19, "fields": {"title": "Political Trends", "content": "New alliances shaping modern geopolitics.", "published_date": "2025-09-21", "topic": 1, "publishers": [1,4]}},
+  {"model": "agency.newspaper", "pk": 20, "fields": {"title": "Science Weekly", "content": "From quantum computing to medical nanotech.", "published_date": "2025-09-20", "topic": 10, "publishers": [2,5]}},
+
+  {"model": "agency.newspaper", "pk": 21, "fields": {"title": "The Fitness Journal", "content": "Training programs and expert interviews.", "published_date": "2025-09-19", "topic": 4, "publishers": [6,8]}},
+  {"model": "agency.newspaper", "pk": 22, "fields": {"title": "Tech Pulse", "content": "Startups changing the world.", "published_date": "2025-09-18", "topic": 2, "publishers": [7,9]}},
+  {"model": "agency.newspaper", "pk": 23, "fields": {"title": "Sports Digest", "content": "Highlighting weekly game summaries.", "published_date": "2025-09-17", "topic": 3, "publishers": [4,10]}},
+  {"model": "agency.newspaper", "pk": 24, "fields": {"title": "Cultural Beat", "content": "Theater, music, and art exhibitions coverage.", "published_date": "2025-09-16", "topic": 6, "publishers": [8,5]}},
+  {"model": "agency.newspaper", "pk": 25, "fields": {"title": "Money Matters", "content": "Inflation, wages, and economic indicators.", "published_date": "2025-09-15", "topic": 7, "publishers": [1,9]}},
+  {"model": "agency.newspaper", "pk": 26, "fields": {"title": "Eco Focus", "content": "Protecting endangered species.", "published_date": "2025-09-14", "topic": 5, "publishers": [2,3]}},
+  {"model": "agency.newspaper", "pk": 27, "fields": {"title": "Learning Hub", "content": "New teaching methods worldwide.", "published_date": "2025-09-13", "topic": 8, "publishers": [4,6]}},
+  {"model": "agency.newspaper", "pk": 28, "fields": {"title": "Science Frontline", "content": "Latest lab discoveries and research.", "published_date": "2025-09-12", "topic": 10, "publishers": [5,7]}},
+  {"model": "agency.newspaper", "pk": 29, "fields": {"title": "Tech Shift", "content": "The rise of green technologies.", "published_date": "2025-09-11", "topic": 2, "publishers": [3,8]}},
+  {"model": "agency.newspaper", "pk": 30, "fields": {"title": "Sports Line", "content": "Athlete interviews and behind-the-scenes insights.", "published_date": "2025-09-10", "topic": 3, "publishers": [9,10]}},
+
+  {"model": "agency.newspaper", "pk": 31, "fields": {"title": "Science Deep Dive", "content": "Understanding black holes and dark matter.", "published_date": "2025-09-09", "topic": 10, "publishers": [1,2]}},
+  {"model": "agency.newspaper", "pk": 32, "fields": {"title": "Healthline Daily", "content": "New medical treatments emerging globally.", "published_date": "2025-09-08", "topic": 4, "publishers": [3,4]}},
+  {"model": "agency.newspaper", "pk": 33, "fields": {"title": "Business Insider", "content": "Corporate strategies and financial moves.", "published_date": "2025-09-07", "topic": 7, "publishers": [5,6]}},
+  {"model": "agency.newspaper", "pk": 34, "fields": {"title": "Political Review", "content": "Regional conflicts and resolutions.", "published_date": "2025-09-06", "topic": 1, "publishers": [7,8]}},
+  {"model": "agency.newspaper", "pk": 35, "fields": {"title": "CineScope", "content": "New actors to watch in 2025.", "published_date": "2025-09-05", "topic": 6, "publishers": [9,10]}},
+  {"model": "agency.newspaper", "pk": 36, "fields": {"title": "Tech Now", "content": "Emerging trends in hardware and software.", "published_date": "2025-09-04", "topic": 2, "publishers": [1,5]}},
+  {"model": "agency.newspaper", "pk": 37, "fields": {"title": "Eco Balance", "content": "Ocean cleanup and sustainability projects.", "published_date": "2025-09-03", "topic": 5, "publishers": [2,6]}},
+  {"model": "agency.newspaper", "pk": 38, "fields": {"title": "World Sports Recap", "content": "Scores, rankings, and athlete stats.", "published_date": "2025-09-02", "topic": 3, "publishers": [3,9]}},
+  {"model": "agency.newspaper", "pk": 39, "fields": {"title": "Global Economy", "content": "Currency trends and trade agreements.", "published_date": "2025-09-01", "topic": 7, "publishers": [4,10]}},
+  {"model": "agency.newspaper", "pk": 40, "fields": {"title": "Travel Journal", "content": "Hidden European destinations worth visiting.", "published_date": "2025-08-31", "topic": 9, "publishers": [1,8]}},
+
+  {"model": "agency.newspaper", "pk": 41, "fields": {"title": "Political Dispatch", "content": "Coverage from international summits.", "published_date": "2025-08-30", "topic": 1, "publishers": [2,9]}},
+  {"model": "agency.newspaper", "pk": 42, "fields": {"title": "Science Edge", "content": "How innovation drives discovery.", "published_date": "2025-08-29", "topic": 10, "publishers": [3,5]}},
+  {"model": "agency.newspaper", "pk": 43, "fields": {"title": "Eco Voice", "content": "Environmental journalism for change.", "published_date": "2025-08-28", "topic": 5, "publishers": [4,7]}},
+  {"model": "agency.newspaper", "pk": 44, "fields": {"title": "Sports Arena", "content": "Analyzing championship outcomes.", "published_date": "2025-08-27", "topic": 3, "publishers": [5,9]}},
+  {"model": "agency.newspaper", "pk": 45, "fields": {"title": "Healthy Planet", "content": "Lifestyle changes for better health.", "published_date": "2025-08-26", "topic": 4, "publishers": [6,8]}},
+  {"model": "agency.newspaper", "pk": 46, "fields": {"title": "Future Tech", "content": "Quantum computing and the next big leap.", "published_date": "2025-08-25", "topic": 2, "publishers": [9,10]}},
+  {"model": "agency.newspaper", "pk": 47, "fields": {"title": "Cultural Scene", "content": "Art, theater, and dance coverage.", "published_date": "2025-08-24", "topic": 6, "publishers": [1,3]}},
+  {"model": "agency.newspaper", "pk": 48, "fields": {"title": "Education Reform", "content": "How schools adapt to AI tools.", "published_date": "2025-08-23", "topic": 8, "publishers": [2,4]}},
+  {"model": "agency.newspaper", "pk": 49, "fields": {"title": "World Market Report", "content": "Trade policies and global supply chains.", "published_date": "2025-08-22", "topic": 7, "publishers": [5,6]}},
+  {"model": "agency.newspaper", "pk": 50, "fields": {"title": "Space Frontier", "content": "Life on Mars missions update.", "published_date": "2025-08-21", "topic": 10, "publishers": [7,9]}},
+
+  {"model": "agency.newspaper", "pk": 51, "fields": {"title": "Global Education", "content": "Cross-border learning initiatives.", "published_date": "2025-08-20", "topic": 8, "publishers": [8,10]}},
+  {"model": "agency.newspaper", "pk": 52, "fields": {"title": "Political Daily", "content": "Inside local government debates.", "published_date": "2025-08-19", "topic": 1, "publishers": [1,5]}},
+  {"model": "agency.newspaper", "pk": 53, "fields": {"title": "Eco Movement", "content": "Youth climate activism worldwide.", "published_date": "2025-08-18", "topic": 5, "publishers": [2,3]}},
+  {"model": "agency.newspaper", "pk": 54, "fields": {"title": "Tech Growth", "content": "Startups revolutionizing healthtech.", "published_date": "2025-08-17", "topic": 2, "publishers": [4,6]}},
+  {"model": "agency.newspaper", "pk": 55, "fields": {"title": "Sport Legends", "content": "Iconic players and their legacies.", "published_date": "2025-08-16", "topic": 3, "publishers": [7,8]}},
+  {"model": "agency.newspaper", "pk": 56, "fields": {"title": "Wellness Digest", "content": "Psychological health and mindfulness.", "published_date": "2025-08-15", "topic": 4, "publishers": [9,10]}},
+  {"model": "agency.newspaper", "pk": 57, "fields": {"title": "CineLife", "content": "Streaming wars and movie reviews.", "published_date": "2025-08-14", "topic": 6, "publishers": [1,2]}},
+  {"model": "agency.newspaper", "pk": 58, "fields": {"title": "Science Insight", "content": "Future of human genome research.", "published_date": "2025-08-13", "topic": 10, "publishers": [3,5]}},
+  {"model": "agency.newspaper", "pk": 59, "fields": {"title": "Economic Pulse", "content": "Central banks and inflation trends.", "published_date": "2025-08-12", "topic": 7, "publishers": [6,9]}},
+  {"model": "agency.newspaper", "pk": 60, "fields": {"title": "Travel Now", "content": "Luxury resorts and affordable travel hacks.", "published_date": "2025-08-11", "topic": 9, "publishers": [4,8]}}
 ]
