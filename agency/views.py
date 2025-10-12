@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
 from agency.models import Newspaper, Topic, Redactor
@@ -26,6 +27,16 @@ class NewspaperDetailView(generic.DetailView):
     model = Newspaper
     queryset = Newspaper.objects.prefetch_related("publishers").select_related("topic")
 
+
+class NewspaperCreateView(generic.CreateView):
+    model = Newspaper
+    fields = "__all__"
+    success_url = reverse_lazy("agency:newspaper-list")
+
+class NewspaperUpdateView(generic.UpdateView):
+    model = Newspaper
+    fields = "__all__"
+    success_url = reverse_lazy("agency:newspaper-list")
 
 
 class TopicListView(generic.ListView):

@@ -2,11 +2,13 @@
 
 
 {% block content %}
-  <h2>Newspapers</h2>
+  <h2>Newspapers <a style="float: right" class="btn btn-primary" href="{% url 'agency:newspaper-create' %}">Create</a></h2>
   <ul>
     {% for newspaper in newspaper_list %}
       <li>
         <a href="{{ newspaper.get_absolute_url }}">{{ newspaper.title }}</a>
+        <a class="btn btn-secondary"
+           href="{% url 'agency:newspaper-update' newspaper.pk %}">Update</a>
       </li>
     {% empty %}
       <p>No newspapers available yet.</p>
