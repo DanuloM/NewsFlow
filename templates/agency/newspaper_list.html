@@ -9,6 +9,8 @@
         <a href="{{ newspaper.get_absolute_url }}">{{ newspaper.title }}</a>
         <a class="btn btn-secondary"
            href="{% url 'agency:newspaper-update' newspaper.pk %}">Update</a>
+        <a class="btn btn-danger"
+           href="{% url 'agency:newspaper-delete' newspaper.pk %}">Delete</a>
       </li>
     {% empty %}
       <p>No newspapers available yet.</p>
