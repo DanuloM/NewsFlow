@@ -49,6 +49,24 @@ class TopicListView(generic.ListView):
     paginate_by = 10
 
 
+class TopicCreateView(generic.CreateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("agency:topic-list")
+
+
+class TopicUpdateView(generic.UpdateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("agency:topic-list")
+
+
+class TopicDeleteView(generic.DeleteView):
+    model = Topic
+    template_name = "agency/topic_confirm_delete.html"
+    success_url = reverse_lazy("agency:topic-list")
+
+
 
 class RedactorListView(generic.ListView):
     model = Redactor

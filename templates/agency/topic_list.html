@@ -2,9 +2,12 @@
 
 
 {% block content %}
-  <h2>Topic list</h2>
+  <h2>Topic list <a style="float: right" class="btn btn-primary" href="{% url 'agency:topic-create' %}">Create</a></h2>
   {% for topic in topic_list %}
-    <p>{{ topic.name }}</p>
+    <p>{{ topic.name }} 
+      <a class="btn btn-primary" href="{% url 'agency:topic-update' topic.pk %}">Update</a>
+      <a class="btn btn-danger" href="{% url 'agency:topic-delete' topic.pk %}">Delete</a>
+    </p>
   {% endfor %}
 
 {% endblock %}
