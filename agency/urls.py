@@ -14,7 +14,7 @@ from agency.views import (
     TopicDeleteView,
     RedactorCreateView,
     RedactorUpdateView,
-    RedactorDeleteView,
+    RedactorDeleteView, ToggleRedactorAssignmentView,
 )
 
 app_name = "agency"
@@ -35,4 +35,5 @@ urlpatterns = [
     path("redactors/create", RedactorCreateView.as_view(), name="redactor-create"),
     path("redactors/<int:pk>/update", RedactorUpdateView.as_view(), name="redactor-update"),
     path("redactors/<int:pk>/delete", RedactorDeleteView.as_view(), name="redactor-delete"),
+    path("newspapers/<int:pk>/toggle", ToggleRedactorAssignmentView.as_view(), name="toggle-redactor"),
 ]

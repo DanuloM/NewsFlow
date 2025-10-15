@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -107,3 +108,19 @@ class RedactorDeleteView(LoginRequiredMixin,generic.DeleteView):
     model = Redactor
     template_name = "agency/redactor_confirm_delete.html"
     success_url = reverse_lazy("agency:redactor-list")
+
+
+
+class ToggleRedactorAssignmentView(LoginRequiredMixin, generic.View):
+    def post(self, request, pk, *args, **kwargs):
+        newspaper = Newspaper.objects.get(pk=pk)
+        redactor = request.user
+
+        if redactor.newspapers.filter(pk=newspaper.pk).exists():
+            redactor.newspapers.remove(newspaper)
+        else:
+            redactor.newspapers.add(newspaper)
+
+        return HttpResponseRedirect(
+            reverse_lazy("agency:newspaper-detail", kwargs={"pk": pk})
+        )
