@@ -9,9 +9,10 @@ class RedactorCreationForm(UserCreationForm):
     newspapers = forms.ModelMultipleChoiceField(
         queryset=Newspaper.objects.all(), required=False
     )
+
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
-        fields = UserCreationForm.Meta.fields + ("first_name", "last_name", "years_of_experience", "newspapers", )
+        fields = UserCreationForm.Meta.fields + ("first_name", "last_name", "years_of_experience", "newspapers",)
 
 
 class RedactorUpdateNewspapersForm(forms.ModelForm):
@@ -27,3 +28,16 @@ class RedactorUpdateNewspapersForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if self.instance.pk:
             self.fields["newspapers"].initial = Newspaper.objects.filter(publishers=self.instance)
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search",
+            },
+        ),
+    )

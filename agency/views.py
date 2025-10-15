@@ -7,7 +7,7 @@ from django.views import generic
 
 from agency.forms import (
     RedactorCreationForm,
-    RedactorUpdateNewspapersForm,
+    RedactorUpdateNewspapersForm, SearchForm,
 )
 from agency.models import Newspaper, Topic, Redactor
 
@@ -29,6 +29,20 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
     model = Newspaper
     paginate_by = 10
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get("query", "")
+        context["search_form"] = SearchForm(
+            initial={"query": query}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Newspaper.objects.all()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(title__icontains=form.cleaned_data["query"])
+        return queryset
 
 class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
     model = Newspaper
@@ -57,6 +71,21 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
     model = Topic
     paginate_by = 10
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get("query", "")
+        context["search_form"] = SearchForm(
+            initial={"query": query}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Topic.objects.all()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["query"])
+        return queryset
+
 
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     model = Topic
@@ -80,6 +109,20 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
     paginate_by = 10
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get("query", "")
+        context["search_form"] = SearchForm(
+            initial={"query": query}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Redactor.objects.all()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(username__icontains=form.cleaned_data["query"])
+        return queryset
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor

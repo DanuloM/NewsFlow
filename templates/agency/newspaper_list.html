@@ -1,8 +1,15 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
 
 
 {% block content %}
   <h2>Newspapers <a style="float: right" class="btn btn-primary" href="{% url 'agency:newspaper-create' %}">Create</a></h2>
+  
+  <form action="" method="get" class="form-inline" style="width: 200px;">
+    {{ search_form|crispy }}
+    <input type="submit" class="btn btn-secondary" value="🔍" style="vertical-align: middle;">
+  </form>
+  
   <ul>
     {% for newspaper in newspaper_list %}
       <li>

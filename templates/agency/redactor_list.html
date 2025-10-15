@@ -1,8 +1,14 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
 
 
 {% block content %}
   <h2>Authors <a style="float: right" class="btn btn-primary" href="{% url 'agency:redactor-create' %}">Create</a></h2>
+  <form action="" method="get" class="form-inline" style="width: 200px;">
+    {{ search_form|crispy }}
+    <input type="submit" class="btn btn-secondary" value="🔍" style="vertical-align: middle;">
+  </form>
+
   {% if redactor_list %}
     <table class="table">
       <tr>
@@ -28,5 +34,5 @@
   {% else %}
     <p>There are no redactors yet</p>
   {% endif %}
-  
+
 {% endblock %}
