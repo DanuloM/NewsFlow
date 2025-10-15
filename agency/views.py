@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
+from agency.forms import (
+    RedactorCreationForm,
+    RedactorUpdateNewspapersForm,
+)
 from agency.models import Newspaper, Topic, Redactor
 
 
@@ -22,7 +26,6 @@ class NewspaperListView(generic.ListView):
     paginate_by = 10
 
 
-
 class NewspaperDetailView(generic.DetailView):
     model = Newspaper
     queryset = Newspaper.objects.prefetch_related("publishers").select_related("topic")
@@ -33,10 +36,12 @@ class NewspaperCreateView(generic.CreateView):
     fields = "__all__"
     success_url = reverse_lazy("agency:newspaper-list")
 
+
 class NewspaperUpdateView(generic.UpdateView):
     model = Newspaper
     fields = "__all__"
     success_url = reverse_lazy("agency:newspaper-list")
+
 
 class NewspaperDeleteView(generic.DeleteView):
     model = Newspaper
@@ -67,13 +72,35 @@ class TopicDeleteView(generic.DeleteView):
     success_url = reverse_lazy("agency:topic-list")
 
 
-
 class RedactorListView(generic.ListView):
     model = Redactor
     paginate_by = 10
 
 
-
 class RedactorDetailView(generic.DetailView):
     model = Redactor
     queryset = Redactor.objects.prefetch_related("newspapers")
+
+
+class RedactorCreateView(generic.CreateView):
+    model = Redactor
+    form_class = RedactorCreationForm
+
+
+class RedactorUpdateView(generic.UpdateView):
+    model = Redactor
+    form_class = RedactorUpdateNewspapersForm
+    success_url = reverse_lazy("agency:redactor-list")
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        self.object.newspapers.clear()
+        for newspaper in form.cleaned_data["newspapers"]:
+            newspaper.publishers.add(self.object)
+        return response
+
+
+class RedactorDeleteView(generic.DeleteView):
+    model = Redactor
+    template_name = "agency/redactor_confirm_delete.html"
+    success_url = reverse_lazy("agency:redactor-list")

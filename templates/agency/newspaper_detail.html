@@ -2,7 +2,7 @@
 
 
 {% block content %}
-  <h2>Newspaper <a class="btn btn-primary" style="float: right" href="{{ request.META.HTTP_REFERER }}">Back to the
+  <h2>Newspaper <a class="btn btn-primary" style="float: right" href="{% url 'agency:newspaper-list' %}">Back to the
     list</a></h2>
   <p><strong>Title: </strong>{{ newspaper.title }}</p>
   <p><strong>Topic: </strong>{{ newspaper.topic }}</p>

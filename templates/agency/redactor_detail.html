@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h2>Author <a class="btn btn-primary" style="float: right" href="{{ request.META.HTTP_REFERER }}">Back to the
+  <h2>Author <a class="btn btn-primary" style="float: right" href="{% url 'agency:redactor-list' %}">Back to the
     list</a></h2>
   <p><strong>Username: </strong>{{ redactor.username }}</p>
   <p><strong>First name: </strong>{{ redactor.first_name }}</p>
