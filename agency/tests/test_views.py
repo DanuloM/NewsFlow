@@ -122,3 +122,19 @@ class PrivateViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "agency/redactor_detail.html")
         self.assertEqual(response.context["object"], self.user)
+
+
+    # ToggleRedactorAssignment
+    def test_toggle_redactor_assignment_add_remove(self):
+        new_newspaper = Newspaper.objects.create(title="Toggle Paper", content="Content", topic=self.topic)
+        url = reverse("agency:toggle-redactor", args=[new_newspaper.id])
+
+        response = self.client.post(url)
+        new_newspaper.refresh_from_db()
+        self.assertEqual(response.status_code, 302)
+        self.assertIn(self.user, new_newspaper.publishers.all())
+
+        response = self.client.post(url)
+        new_newspaper.refresh_from_db()
+        self.assertEqual(response.status_code, 302)
+        self.assertNotIn(self.user, new_newspaper.publishers.all())
