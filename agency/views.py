@@ -7,7 +7,8 @@ from django.views import generic
 
 from agency.forms import (
     RedactorCreationForm,
-    RedactorUpdateNewspapersForm, SearchForm,
+    RedactorUpdateNewspapersForm,
+    SearchForm,
 )
 from agency.models import Newspaper, Topic, Redactor
 
