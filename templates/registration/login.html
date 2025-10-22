@@ -1,14 +1,74 @@
-{% extends "base.html" %}
-{% load crispy_forms_filters %}
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %}Login - NewsFlow{% endblock %}
 
 {% block content %}
-  <h1>Login</h1>
-  {% if form.errors %}
-   <p>Invalid credentials</p>
-  {% endif %}
-  <form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input class="btn btn-primary" type="submit" value="Submit">
-  </form>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-7">
+      <div class="card z-index-0 shadow-lg border-0 rounded-lg mt-5">
+        <div class="card-header bg-transparent pb-4">
+          <div class="text-center">
+            <h3 class="font-weight-bolder text-primary text-gradient mb-1">
+              Welcome back
+            </h3>
+            <p class="mb-0">Sign in to your NewsFlow account</p>
+          </div>
+        </div>
+        <div class="card-body px-lg-5 py-lg-4">
+          {% if form.errors %}
+            <div class="alert alert-danger text-white text-sm text-center" role="alert">
+              <strong>Invalid credentials!</strong> Please check your username and password.
+            </div>
+          {% endif %}
+
+          <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <div class="input-group input-group-outline">
+                <input type="text" 
+                       name="username" 
+                       class="form-control" 
+                       placeholder="Enter your username"
+                       required>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Password</label>
+              <div class="input-group input-group-outline">
+                <input type="password" 
+                       name="password" 
+                       class="form-control" 
+                       placeholder="Enter your password"
+                       required>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                Sign In
+              </button>
+              
+              <input type="hidden" name="next" value="{{ next }}" />
+              
+              <p class="text-sm text-muted mt-3">
+                Don't have an account? 
+                <a href="{% url 'agency:redactor-create' %}" class="text-primary text-gradient font-weight-bold">
+                  Sign up
+                </a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Include your auth footer -->
+      {% include "includes/footer-auth.html" %}
+      
+    </div>
+  </div>
+</div>
 {% endblock %}
