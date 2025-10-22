@@ -1,26 +1,80 @@
-{% extends "base.html" %}
-
+{% extends "layouts/base-fullscreen.html" %}
 
 {% block content %}
-  <h2>Newspaper <a class="btn btn-primary" style="float: right" href="{% url 'agency:newspaper-list' %}">Back to the
-    list</a></h2>
-  <p><strong>Title: </strong>{{ newspaper.title }}</p>
-  <p><strong>Topic: </strong>{{ newspaper.topic }}</p>
-  <p>{{ newspaper.content }}</p>
-  <strong>Authors: </strong>
-  {% for author in newspaper.publishers.all %}
-    <p>{{ author.first_name }} {{ author.last_name }}</p>
+<div class="container-fluid mt-5">
+  <div class="row mt-3">
+    <div class="col-12 mt-5">
+      <div class="card mt-3">
+        <div class="card-header pb-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">{{ newspaper.title }}</h4>
+            <a class="btn btn-outline-primary btn-sm mb-0" href="{% url 'agency:newspaper-list' %}">
+              <i class="fas fa-arrow-left me-2"></i>Back to list
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="mb-3">
+                <h6 class="text-primary mb-1">Topic</h6>
+                <p class="text-dark mb-0">{{ newspaper.topic }}</p>
+              </div>
 
-  {% endfor %}
+              <div class="mb-4">
+                <h6 class="text-primary mb-1">Content</h6>
+                <p class="text-dark">{{ newspaper.content }}</p>
+              </div>
 
-  <p>{{ newspaper.published_date }}</p>
-  <form action="{% url 'agency:toggle-redactor' pk=newspaper.id %}" method="post">
-    {% csrf_token %}
-    {% if newspaper in user.newspapers.all %}
-      <input class="btn btn-danger" type="submit" value="Delete me from this newspaper">
-    {% else %}
-      <input class="btn btn-success" type="submit" value="Assign me to this newspaper">
-    {% endif %}
-  </form>
+              <div class="mb-3">
+                <h6 class="text-primary mb-1">Published Date</h6>
+                <p class="text-dark mb-0">{{ newspaper.published_date }}</p>
+              </div>
+            </div>
 
+            <div class="col-md-4">
+              <div class="card card-plain">
+                <div class="card-header">
+                  <h6 class="mb-0">Authors</h6>
+                </div>
+                <div class="card-body">
+                  {% for author in newspaper.publishers.all %}
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="icon icon-shape icon-sm bg-gradient-primary shadow text-center border-radius-md">
+                        <i class="fas fa-user text-white opacity-10"></i>
+                      </div>
+                      <div class="ms-3">
+                        <p class="text-dark font-weight-bold mb-0">{{ author.first_name }} {{ author.last_name }}</p>
+                        <p class="text-xs text-secondary mb-0">{% if author.years_of_experience %}{{ author.years_of_experience }} years experience{% endif %}</p>
+                      </div>
+                    </div>
+                  {% empty %}
+                    <p class="text-sm text-secondary">No authors assigned</p>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-12">
+              <form action="{% url 'agency:toggle-redactor' pk=newspaper.id %}" method="post">
+                {% csrf_token %}
+                {% if newspaper in user.newspapers.all %}
+                  <button class="btn btn-danger btn-lg w-100" type="submit">
+                    <i class="fas fa-user-times me-2"></i>Delete me from this newspaper
+                  </button>
+                {% else %}
+                  <button class="btn btn-success btn-lg w-100" type="submit">
+                    <i class="fas fa-user-plus me-2"></i>Assign me to this newspaper
+                  </button>
+                {% endif %}
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
