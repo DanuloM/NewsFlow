@@ -1,26 +1,57 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 {% load crispy_forms_filters %}
 
-
 {% block content %}
-  <h2>Newspapers <a style="float: right" class="btn btn-primary" href="{% url 'agency:newspaper-create' %}">Create</a></h2>
-  
-  <form action="" method="get" class="form-inline" style="width: 200px;">
-    {{ search_form|crispy }}
-    <input type="submit" class="btn btn-secondary" value="🔍" style="vertical-align: middle;">
-  </form>
-  
-  <ul>
-    {% for newspaper in newspaper_list %}
-      <li>
-        <a href="{{ newspaper.get_absolute_url }}">{{ newspaper.title }}</a>
-        <a class="btn btn-secondary"
-           href="{% url 'agency:newspaper-update' newspaper.pk %}">Update</a>
-        <a class="btn btn-danger"
-           href="{% url 'agency:newspaper-delete' newspaper.pk %}">Delete</a>
-      </li>
-    {% empty %}
+  <div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">Newspapers</h2>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-stretch mb-4">
+      <form action="" method="get" class="d-flex" style="max-width: 450px; height: 45px;">
+        <input
+            type="text"
+            name="query"
+            class="form-control h-100 border-end-0"
+            placeholder="Search newspapers..."
+            value="{{ request.GET.query }}"
+            style="border-radius: 8px 0 0 8px; border: 1px solid #d2d6da; padding-left: 15px; width: 300px;">
+        <button class="btn bg-gradient-primary h-100 border-start-0"
+                type="submit"
+                style="border-radius: 0 8px 8px 0; width: 50px; padding: 0; border: 1px solid #d2d6da; border-left: none;">
+          🔍
+        </button>
+      </form>
+      <a class="btn btn-primary align-self-center" href="{% url 'agency:newspaper-create' %}">Create</a>
+    </div>
+
+    {% if newspaper_list %}
+      <div class="row">
+        {% for newspaper in newspaper_list %}
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ newspaper.get_absolute_url }}" class="text-decoration-none">
+                    {{ newspaper.title }}
+                  </a>
+                </h5>
+                <p class="card-text text-muted">
+                  {{ newspaper.content|truncatewords:20 }}
+                </p>
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <a href="{% url 'agency:newspaper-update' newspaper.pk %}" class="btn btn-sm btn-secondary">Update</a>
+                <a href="{% url 'agency:newspaper-delete' newspaper.pk %}" class="btn btn-sm btn-danger">Delete</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
       <p>No newspapers available yet.</p>
-    {% endfor %}
-  </ul>
+    {% endif %}
+
+  </div>
 {% endblock %}
