@@ -1,12 +1,68 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 {% load crispy_forms_filters %}
 
-
 {% block content %}
-  <h1>{{ object|yesno:"Update,Create"}} topic</h1>
-  <form method="post" action="" novalidate>
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input class="btn btn-primary" type="submit" value="Submit">
-  </form>
+  <div class="container-fluid py-4 mt-6">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card mt-3">
+          <div class="card-header pb-0">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">{{ object|yesno:"Update,Create" }} Topic</h5>
+              <a class="btn btn-outline-primary btn-sm mb-0" href="{% url 'agency:topic-list' %}">
+                <i class="fas fa-arrow-left me-1"></i>Back to List
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <form method="post" action="" novalidate>
+              {% csrf_token %}
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group input-group-outline mb-4 {% if form.name.value %}is-filled{% endif %}">
+                    <label class="form-label">Topic Name</label>
+                    <input type="text" name="name" class="form-control" value="{{ form.name.value|default:'' }}"
+                           required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-12">
+                  <div class="d-flex justify-content-end gap-3">
+                    <a href="{% url 'agency:topic-list' %}" class="btn btn-outline-secondary">
+                      Cancel
+                    </a>
+                    <button class="btn btn-primary" type="submit">
+                      <i class="fas fa-save me-2"></i>{{ object|yesno:"Update,Create" }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const inputs = document.querySelectorAll('.form-control');
+          inputs.forEach(input => {
+              if (input.value) {
+                  input.parentElement.classList.add('is-filled');
+              }
+              
+              input.addEventListener('input', function () {
+                  if (this.value) {
+                      this.parentElement.classList.add('is-filled');
+                  } else {
+                      this.parentElement.classList.remove('is-filled');
+                  }
+              });
+          });
+      });
+  </script>
 {% endblock %}
