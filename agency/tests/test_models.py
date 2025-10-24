@@ -25,6 +25,15 @@ class TestRedactor(TestCase):
         self.assertEqual(str(self.redactor1), "JackS Jack Smith")
 
 
+    def test_get_absolute_url(self):
+        redactor = Redactor.objects.create_user(
+            username="test",
+            password="pass123"
+        )
+        expected_url = f"/redactors/{redactor.id}/"
+        self.assertEqual(redactor.get_absolute_url(), expected_url)
+
+
 class TestNewspaper(TestCase):
     def setUp(self):
         self.topic1 = Topic.objects.create(name="test_topic")
@@ -35,3 +44,8 @@ class TestNewspaper(TestCase):
 
     def test_string_representation(self):
         self.assertEqual(str(self.newspaper), "testtitle (Topic: test_topic)")
+
+
+    def test_get_absolute_url(self):
+        expected_url = f"/newspapers/{self.newspaper.id}/"
+        self.assertEqual(self.newspaper.get_absolute_url(), expected_url)
