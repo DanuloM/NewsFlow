@@ -1,0 +1,1353 @@
+[
+  {
+    "model": "agency.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Politics"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Economy"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Technology"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Science"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Health"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Sports"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Education"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Environment"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 9,
+    "fields": {
+      "name": "Culture"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 10,
+    "fields": {
+      "name": "World"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 11,
+    "fields": {
+      "name": "Business"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 12,
+    "fields": {
+      "name": "Entertainment"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 13,
+    "fields": {
+      "name": "Travel"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 14,
+    "fields": {
+      "name": "Fashion"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 15,
+    "fields": {
+      "name": "Energy"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 16,
+    "fields": {
+      "name": "Crime"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 17,
+    "fields": {
+      "name": "War"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 18,
+    "fields": {
+      "name": "Agriculture"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 19,
+    "fields": {
+      "name": "Real Estate"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 20,
+    "fields": {
+      "name": "Automotive"
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "john_smith",
+      "first_name": "John",
+      "last_name": "Smith",
+      "email": "john.smith@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "emily_johnson",
+      "first_name": "Emily",
+      "last_name": "Johnson",
+      "email": "emily.johnson@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 12,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "michael_brown",
+      "first_name": "Michael",
+      "last_name": "Brown",
+      "email": "michael.brown@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sarah_taylor",
+      "first_name": "Sarah",
+      "last_name": "Taylor",
+      "email": "sarah.taylor@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "david_anderson",
+      "first_name": "David",
+      "last_name": "Anderson",
+      "email": "david.anderson@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 10,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "olivia_white",
+      "first_name": "Olivia",
+      "last_name": "White",
+      "email": "olivia.white@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 13,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "james_thomas",
+      "first_name": "James",
+      "last_name": "Thomas",
+      "email": "james.thomas@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 10,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sophia_moore",
+      "first_name": "Sophia",
+      "last_name": "Moore",
+      "email": "sophia.moore@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 11,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "daniel_jackson",
+      "first_name": "Daniel",
+      "last_name": "Jackson",
+      "email": "daniel.jackson@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 10,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "emma_martin",
+      "first_name": "Emma",
+      "last_name": "Martin",
+      "email": "emma.martin@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "matthew_lee",
+      "first_name": "Matthew",
+      "last_name": "Lee",
+      "email": "matthew.lee@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 13,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ava_harris",
+      "first_name": "Ava",
+      "last_name": "Harris",
+      "email": "ava.harris@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 8,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "andrew_clark",
+      "first_name": "Andrew",
+      "last_name": "Clark",
+      "email": "andrew.clark@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "isabella_lewis",
+      "first_name": "Isabella",
+      "last_name": "Lewis",
+      "email": "isabella.lewis@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 8,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$example$examplehashedpassword",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ethan_walker",
+      "first_name": "Ethan",
+      "last_name": "Walker",
+      "email": "ethan.walker@newsagency.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "years_of_experience": 11,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "Schools to Introduce Coding Classes",
+      "content": "Citizens are hopeful for long-term stability and transparency. Industry leaders are calling for more regulation and oversight. Experts say the decision could reshape international relations.",
+      "published_date": "2024-10-19",
+      "topic": 20,
+      "publishers": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "Tech Giants Release AI Safety Guidelines",
+      "content": "Economic forecasts indicate steady growth in the next quarter. Public opinion remains divided as reforms are introduced. Environmental groups have expressed cautious optimism.",
+      "published_date": "2025-03-31",
+      "topic": 10,
+      "publishers": [
+        14,
+        13
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "Scientists Discover Potential Cancer Cure",
+      "content": "Officials claim this marks a new era in national development. Economic forecasts indicate steady growth in the next quarter. Experts say the decision could reshape international relations.",
+      "published_date": "2025-07-06",
+      "topic": 14,
+      "publishers": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "Peace Talks Resume Amid Rising Tensions",
+      "content": "Public opinion remains divided as reforms are introduced. Experts say the decision could reshape international relations. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-02-22",
+      "topic": 18,
+      "publishers": [
+        5,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Startup Raises $50M for Green Energy",
+      "content": "Environmental groups have expressed cautious optimism. Analysts predict a strong impact on the global market. Citizens are hopeful for long-term stability and transparency.",
+      "published_date": "2024-07-08",
+      "topic": 7,
+      "publishers": [
+        5,
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "Fashion Week Highlights Sustainable Design",
+      "content": "Environmental groups have expressed cautious optimism. The discovery could revolutionize the field of medicine. Researchers emphasize the importance of continuous innovation.",
+      "published_date": "2025-01-27",
+      "topic": 14,
+      "publishers": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Local Team Wins National Championship",
+      "content": "Industry leaders are calling for more regulation and oversight. Analysts predict a strong impact on the global market. Officials claim this marks a new era in national development.",
+      "published_date": "2024-04-20",
+      "topic": 9,
+      "publishers": [
+        1,
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "Government Approves New Budget Plan",
+      "content": "Experts say the decision could reshape international relations. Researchers emphasize the importance of continuous innovation. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-08-17",
+      "topic": 1,
+      "publishers": [
+        15,
+        11
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "Startup Raises $50M for Green Energy",
+      "content": "Researchers emphasize the importance of continuous innovation. Experts say the decision could reshape international relations. Officials claim this marks a new era in national development.",
+      "published_date": "2024-12-27",
+      "topic": 17,
+      "publishers": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Tech Giants Release AI Safety Guidelines",
+      "content": "Public opinion remains divided as reforms are introduced. Experts say the decision could reshape international relations. Experts say the decision could reshape international relations.",
+      "published_date": "2024-03-29",
+      "topic": 2,
+      "publishers": [
+        10,
+        12,
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 11,
+    "fields": {
+      "title": "Automakers Shift Focus to Electric Vehicles",
+      "content": "Experts say the decision could reshape international relations. Experts say the decision could reshape international relations. The discovery could revolutionize the field of medicine.",
+      "published_date": "2024-08-19",
+      "topic": 6,
+      "publishers": [
+        8,
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 12,
+    "fields": {
+      "title": "Schools to Introduce Coding Classes",
+      "content": "Researchers emphasize the importance of continuous innovation. Officials claim this marks a new era in national development. Economic forecasts indicate steady growth in the next quarter.",
+      "published_date": "2024-10-26",
+      "topic": 4,
+      "publishers": [
+        2,
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 13,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "The discovery could revolutionize the field of medicine. Economic forecasts indicate steady growth in the next quarter. Analysts predict a strong impact on the global market.",
+      "published_date": "2024-12-31",
+      "topic": 18,
+      "publishers": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 14,
+    "fields": {
+      "title": "Automakers Shift Focus to Electric Vehicles",
+      "content": "The discovery could revolutionize the field of medicine. Economic forecasts indicate steady growth in the next quarter. Environmental groups have expressed cautious optimism.",
+      "published_date": "2024-12-19",
+      "topic": 15,
+      "publishers": [
+        15,
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 15,
+    "fields": {
+      "title": "UN Summit Discusses Climate Crisis",
+      "content": "Environmental groups have expressed cautious optimism. Economic forecasts indicate steady growth in the next quarter. Environmental groups have expressed cautious optimism.",
+      "published_date": "2025-04-09",
+      "topic": 15,
+      "publishers": [
+        13,
+        4,
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 16,
+    "fields": {
+      "title": "Breakthrough in Quantum Computing Announced",
+      "content": "Industry leaders are calling for more regulation and oversight. Economic forecasts indicate steady growth in the next quarter. Economic forecasts indicate steady growth in the next quarter.",
+      "published_date": "2025-06-17",
+      "topic": 3,
+      "publishers": [
+        10,
+        4
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 17,
+    "fields": {
+      "title": "UN Summit Discusses Climate Crisis",
+      "content": "Officials claim this marks a new era in national development. Experts say the decision could reshape international relations. Officials claim this marks a new era in national development.",
+      "published_date": "2025-04-21",
+      "topic": 1,
+      "publishers": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 18,
+    "fields": {
+      "title": "Breakthrough in Quantum Computing Announced",
+      "content": "Researchers emphasize the importance of continuous innovation. Environmental groups have expressed cautious optimism. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-12-15",
+      "topic": 2,
+      "publishers": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 19,
+    "fields": {
+      "title": "Schools to Introduce Coding Classes",
+      "content": "Researchers emphasize the importance of continuous innovation. Economic forecasts indicate steady growth in the next quarter. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-11-02",
+      "topic": 12,
+      "publishers": [
+        15,
+        8,
+        2
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 20,
+    "fields": {
+      "title": "Schools to Introduce Coding Classes",
+      "content": "Industry leaders are calling for more regulation and oversight. Citizens are hopeful for long-term stability and transparency. Economic forecasts indicate steady growth in the next quarter.",
+      "published_date": "2024-07-07",
+      "topic": 14,
+      "publishers": [
+        11,
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 21,
+    "fields": {
+      "title": "Cyberattack Disrupts Global Shipping",
+      "content": "The discovery could revolutionize the field of medicine. Analysts predict a strong impact on the global market. Environmental groups have expressed cautious optimism.",
+      "published_date": "2024-06-18",
+      "topic": 6,
+      "publishers": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 22,
+    "fields": {
+      "title": "Startup Raises $50M for Green Energy",
+      "content": "Citizens are hopeful for long-term stability and transparency. The discovery could revolutionize the field of medicine. Environmental groups have expressed cautious optimism.",
+      "published_date": "2024-04-10",
+      "topic": 13,
+      "publishers": [
+        3,
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 23,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "Economic forecasts indicate steady growth in the next quarter. Environmental groups have expressed cautious optimism. Analysts predict a strong impact on the global market.",
+      "published_date": "2024-02-08",
+      "topic": 13,
+      "publishers": [
+        10,
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 24,
+    "fields": {
+      "title": "Movie Breaks Box Office Records",
+      "content": "Analysts predict a strong impact on the global market. Researchers emphasize the importance of continuous innovation. Economic forecasts indicate steady growth in the next quarter.",
+      "published_date": "2025-03-07",
+      "topic": 2,
+      "publishers": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 25,
+    "fields": {
+      "title": "Fashion Week Highlights Sustainable Design",
+      "content": "Officials claim this marks a new era in national development. Experts say the decision could reshape international relations. The discovery could revolutionize the field of medicine.",
+      "published_date": "2025-08-12",
+      "topic": 10,
+      "publishers": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 26,
+    "fields": {
+      "title": "Oil Prices Hit Five-Year Low",
+      "content": "Economic forecasts indicate steady growth in the next quarter. Environmental groups have expressed cautious optimism. Experts say the decision could reshape international relations.",
+      "published_date": "2024-11-03",
+      "topic": 15,
+      "publishers": [
+        3,
+        6,
+        15
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 27,
+    "fields": {
+      "title": "Schools to Introduce Coding Classes",
+      "content": "Officials claim this marks a new era in national development. Experts say the decision could reshape international relations. Citizens are hopeful for long-term stability and transparency.",
+      "published_date": "2025-02-06",
+      "topic": 9,
+      "publishers": [
+        4,
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 28,
+    "fields": {
+      "title": "Government Approves New Budget Plan",
+      "content": "The discovery could revolutionize the field of medicine. Economic forecasts indicate steady growth in the next quarter. Industry leaders are calling for more regulation and oversight.",
+      "published_date": "2024-07-25",
+      "topic": 1,
+      "publishers": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 29,
+    "fields": {
+      "title": "Breakthrough in Solar Energy Storage",
+      "content": "Researchers emphasize the importance of continuous innovation. Officials claim this marks a new era in national development. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-04-10",
+      "topic": 2,
+      "publishers": [
+        11,
+        7
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 30,
+    "fields": {
+      "title": "Farmers Protest Over New Trade Rules",
+      "content": "Environmental groups have expressed cautious optimism. Economic forecasts indicate steady growth in the next quarter. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2025-02-19",
+      "topic": 16,
+      "publishers": [
+        10,
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 31,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "Experts say the decision could reshape international relations. Researchers emphasize the importance of continuous innovation. Economic forecasts indicate steady growth in the next quarter.",
+      "published_date": "2025-03-28",
+      "topic": 17,
+      "publishers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 32,
+    "fields": {
+      "title": "UN Summit Discusses Climate Crisis",
+      "content": "Public opinion remains divided as reforms are introduced. Environmental groups have expressed cautious optimism. Industry leaders are calling for more regulation and oversight.",
+      "published_date": "2024-12-05",
+      "topic": 13,
+      "publishers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 33,
+    "fields": {
+      "title": "Farmers Protest Over New Trade Rules",
+      "content": "Industry leaders are calling for more regulation and oversight. Analysts predict a strong impact on the global market. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2025-01-06",
+      "topic": 19,
+      "publishers": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 34,
+    "fields": {
+      "title": "New Study Reveals Health Benefits of Walking",
+      "content": "Environmental groups have expressed cautious optimism. Experts say the decision could reshape international relations. Environmental groups have expressed cautious optimism.",
+      "published_date": "2025-05-01",
+      "topic": 4,
+      "publishers": [
+        1,
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 35,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "Experts say the decision could reshape international relations. Researchers emphasize the importance of continuous innovation. Researchers emphasize the importance of continuous innovation.",
+      "published_date": "2024-03-16",
+      "topic": 7,
+      "publishers": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 36,
+    "fields": {
+      "title": "Movie Breaks Box Office Records",
+      "content": "Experts say the decision could reshape international relations. Economic forecasts indicate steady growth in the next quarter. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-08-08",
+      "topic": 1,
+      "publishers": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 37,
+    "fields": {
+      "title": "Breakthrough in Quantum Computing Announced",
+      "content": "Industry leaders are calling for more regulation and oversight. Economic forecasts indicate steady growth in the next quarter. Citizens are hopeful for long-term stability and transparency.",
+      "published_date": "2024-03-26",
+      "topic": 15,
+      "publishers": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 38,
+    "fields": {
+      "title": "Peace Talks Resume Amid Rising Tensions",
+      "content": "Researchers emphasize the importance of continuous innovation. Economic forecasts indicate steady growth in the next quarter. Experts say the decision could reshape international relations.",
+      "published_date": "2024-09-27",
+      "topic": 3,
+      "publishers": [
+        14,
+        13
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 39,
+    "fields": {
+      "title": "Startup Raises $50M for Green Energy",
+      "content": "The discovery could revolutionize the field of medicine. Public opinion remains divided as reforms are introduced. Experts say the decision could reshape international relations.",
+      "published_date": "2025-01-22",
+      "topic": 5,
+      "publishers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 40,
+    "fields": {
+      "title": "Movie Breaks Box Office Records",
+      "content": "Public opinion remains divided as reforms are introduced. Economic forecasts indicate steady growth in the next quarter. Experts say the decision could reshape international relations.",
+      "published_date": "2024-07-02",
+      "topic": 9,
+      "publishers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 41,
+    "fields": {
+      "title": "Major Bank Faces Fraud Investigation",
+      "content": "Environmental groups have expressed cautious optimism. Public opinion remains divided as reforms are introduced. Experts say the decision could reshape international relations.",
+      "published_date": "2025-07-31",
+      "topic": 10,
+      "publishers": [
+        13,
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 42,
+    "fields": {
+      "title": "Farmers Protest Over New Trade Rules",
+      "content": "Experts say the decision could reshape international relations. Researchers emphasize the importance of continuous innovation. Environmental groups have expressed cautious optimism.",
+      "published_date": "2025-05-20",
+      "topic": 11,
+      "publishers": [
+        6,
+        12,
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 43,
+    "fields": {
+      "title": "Peace Talks Resume Amid Rising Tensions",
+      "content": "Officials claim this marks a new era in national development. Economic forecasts indicate steady growth in the next quarter. The discovery could revolutionize the field of medicine.",
+      "published_date": "2024-08-25",
+      "topic": 15,
+      "publishers": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 44,
+    "fields": {
+      "title": "Cyberattack Disrupts Global Shipping",
+      "content": "Public opinion remains divided as reforms are introduced. Analysts predict a strong impact on the global market. Officials claim this marks a new era in national development.",
+      "published_date": "2024-10-13",
+      "topic": 6,
+      "publishers": [
+        14,
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 45,
+    "fields": {
+      "title": "Automakers Shift Focus to Electric Vehicles",
+      "content": "Researchers emphasize the importance of continuous innovation. The discovery could revolutionize the field of medicine. Environmental groups have expressed cautious optimism.",
+      "published_date": "2024-12-22",
+      "topic": 7,
+      "publishers": [
+        12,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 46,
+    "fields": {
+      "title": "Automakers Shift Focus to Electric Vehicles",
+      "content": "Experts say the decision could reshape international relations. Environmental groups have expressed cautious optimism. Industry leaders are calling for more regulation and oversight.",
+      "published_date": "2024-04-23",
+      "topic": 3,
+      "publishers": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 47,
+    "fields": {
+      "title": "Peace Talks Resume Amid Rising Tensions",
+      "content": "Environmental groups have expressed cautious optimism. Citizens are hopeful for long-term stability and transparency. Economic forecasts indicate steady growth in the next quarter.",
+      "published_date": "2024-08-11",
+      "topic": 16,
+      "publishers": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 48,
+    "fields": {
+      "title": "Local Team Wins National Championship",
+      "content": "Officials claim this marks a new era in national development. Citizens are hopeful for long-term stability and transparency. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-06-23",
+      "topic": 9,
+      "publishers": [
+        5,
+        15
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 49,
+    "fields": {
+      "title": "Breakthrough in Solar Energy Storage",
+      "content": "Officials claim this marks a new era in national development. Officials claim this marks a new era in national development. The discovery could revolutionize the field of medicine.",
+      "published_date": "2024-10-25",
+      "topic": 16,
+      "publishers": [
+        13,
+        12
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 50,
+    "fields": {
+      "title": "Tech Giants Release AI Safety Guidelines",
+      "content": "Citizens are hopeful for long-term stability and transparency. Officials claim this marks a new era in national development. Analysts predict a strong impact on the global market.",
+      "published_date": "2025-05-25",
+      "topic": 12,
+      "publishers": [
+        15,
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 51,
+    "fields": {
+      "title": "Startup Raises $50M for Green Energy",
+      "content": "Public opinion remains divided as reforms are introduced. Researchers emphasize the importance of continuous innovation. The discovery could revolutionize the field of medicine.",
+      "published_date": "2025-06-09",
+      "topic": 7,
+      "publishers": [
+        13,
+        1,
+        4
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 52,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "Industry leaders are calling for more regulation and oversight. Public opinion remains divided as reforms are introduced. Experts say the decision could reshape international relations.",
+      "published_date": "2025-06-28",
+      "topic": 16,
+      "publishers": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 53,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "Environmental groups have expressed cautious optimism. Researchers emphasize the importance of continuous innovation. Experts say the decision could reshape international relations.",
+      "published_date": "2024-01-31",
+      "topic": 16,
+      "publishers": [
+        1,
+        7,
+        6
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 54,
+    "fields": {
+      "title": "Schools to Introduce Coding Classes",
+      "content": "Experts say the decision could reshape international relations. Environmental groups have expressed cautious optimism. Researchers emphasize the importance of continuous innovation.",
+      "published_date": "2024-08-09",
+      "topic": 11,
+      "publishers": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 55,
+    "fields": {
+      "title": "Fashion Week Highlights Sustainable Design",
+      "content": "Environmental groups have expressed cautious optimism. Officials claim this marks a new era in national development. Experts say the decision could reshape international relations.",
+      "published_date": "2024-06-22",
+      "topic": 12,
+      "publishers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 56,
+    "fields": {
+      "title": "Scientists Discover Potential Cancer Cure",
+      "content": "Public opinion remains divided as reforms are introduced. Experts say the decision could reshape international relations. Experts say the decision could reshape international relations.",
+      "published_date": "2025-07-17",
+      "topic": 20,
+      "publishers": [
+        7,
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 57,
+    "fields": {
+      "title": "Tourism Industry Sees Record Growth",
+      "content": "Experts say the decision could reshape international relations. Experts say the decision could reshape international relations. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2024-11-30",
+      "topic": 19,
+      "publishers": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 58,
+    "fields": {
+      "title": "Startup Raises $50M for Green Energy",
+      "content": "Officials claim this marks a new era in national development. Public opinion remains divided as reforms are introduced. Citizens are hopeful for long-term stability and transparency.",
+      "published_date": "2024-11-20",
+      "topic": 10,
+      "publishers": [
+        10,
+        13
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 59,
+    "fields": {
+      "title": "Automakers Shift Focus to Electric Vehicles",
+      "content": "Citizens are hopeful for long-term stability and transparency. Analysts predict a strong impact on the global market. Analysts predict a strong impact on the global market.",
+      "published_date": "2024-01-01",
+      "topic": 9,
+      "publishers": [
+        12,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 60,
+    "fields": {
+      "title": "Breakthrough in Quantum Computing Announced",
+      "content": "Experts say the decision could reshape international relations. The discovery could revolutionize the field of medicine. Analysts predict a strong impact on the global market.",
+      "published_date": "2025-06-12",
+      "topic": 18,
+      "publishers": [
+        15,
+        3,
+        8
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 61,
+    "fields": {
+      "title": "Scientists Discover Potential Cancer Cure",
+      "content": "Public opinion remains divided as reforms are introduced. Researchers emphasize the importance of continuous innovation. Researchers emphasize the importance of continuous innovation.",
+      "published_date": "2025-06-16",
+      "topic": 14,
+      "publishers": [
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 62,
+    "fields": {
+      "title": "Major Bank Faces Fraud Investigation",
+      "content": "Economic forecasts indicate steady growth in the next quarter. Researchers emphasize the importance of continuous innovation. Researchers emphasize the importance of continuous innovation.",
+      "published_date": "2024-05-07",
+      "topic": 5,
+      "publishers": [
+        10,
+        2
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 63,
+    "fields": {
+      "title": "Automakers Shift Focus to Electric Vehicles",
+      "content": "Researchers emphasize the importance of continuous innovation. Citizens are hopeful for long-term stability and transparency. Analysts predict a strong impact on the global market.",
+      "published_date": "2024-06-07",
+      "topic": 5,
+      "publishers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 64,
+    "fields": {
+      "title": "Breakthrough in Solar Energy Storage",
+      "content": "Citizens are hopeful for long-term stability and transparency. Officials claim this marks a new era in national development. The discovery could revolutionize the field of medicine.",
+      "published_date": "2025-03-02",
+      "topic": 13,
+      "publishers": [
+        13,
+        6
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 65,
+    "fields": {
+      "title": "Local Team Wins National Championship",
+      "content": "Public opinion remains divided as reforms are introduced. Researchers emphasize the importance of continuous innovation. The discovery could revolutionize the field of medicine.",
+      "published_date": "2024-01-21",
+      "topic": 15,
+      "publishers": [
+        4,
+        11,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 66,
+    "fields": {
+      "title": "Government Approves New Budget Plan",
+      "content": "Economic forecasts indicate steady growth in the next quarter. Analysts predict a strong impact on the global market. Officials claim this marks a new era in national development.",
+      "published_date": "2024-02-09",
+      "topic": 14,
+      "publishers": [
+        3,
+        13,
+        14
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 67,
+    "fields": {
+      "title": "Scientists Discover Potential Cancer Cure",
+      "content": "Public opinion remains divided as reforms are introduced. Officials claim this marks a new era in national development. Public opinion remains divided as reforms are introduced.",
+      "published_date": "2025-01-25",
+      "topic": 14,
+      "publishers": [
+        14
+      ]
+    }
+  }
+]
